@@ -1,0 +1,17 @@
+[package]
+authors = ["Christopher Brickley <brickley@gmail.com>"]
+description = "A macro like try!, but turns a Result into an Option, mainly for use in a filter_map"
+documentation = "https://open.frostly.com/try_into_opt"
+keywords = ["try", "Option", "Result", "filter_map", "macro"]
+license = "MIT/Apache-2.0"
+name = "try_into_opt"
+readme = "README.md"
+repository = "https://github.com/frostly/try_into_opt"
+version = "0.1.0"
+
+[dependencies.clippy]
+optional = true
+version = "^0.0"
+
+[features]
+nightly-testing = ["clippy"]

@@ -1,5 +1,10 @@
 //! A macro like `try!`, but turns a `Result` into an `Option`, mainly for use in a `filter_map`.
 
+/// A macro like `try!` but turns a `Result` into an `Option`, mainly for use in a `filter_map`.
+/// Provides early return of Errors like `try!` does in `map`.
+///
+/// # Example
+///
 /// ```
 /// #[macro_use]
 /// extern crate try_into_opt;
@@ -37,9 +42,6 @@
 ///     assert_eq!(nums, [1, 2, 3, 10, 0]);
 /// }
 /// ```
-
-/// A macro like `try!` but turns a `Result` into an `Option`, mainly for use in a `filter_map`.
-/// Provides early return of Errors like `try!` does in `map`.
 #[macro_export]
 macro_rules! try_into_opt {
     ($e:expr) =>(
